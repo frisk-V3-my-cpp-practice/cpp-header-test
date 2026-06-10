@@ -1,11 +1,12 @@
 #include "Engine.hpp"
+#include <iostream>
 
 int main() {
-    // 1. Engineクラスのオブジェクトを作る
-    Engine myEngine("MyTestEngine", 1);
-
-    // 2. メンバ関数を呼び出してテストする
+    Engine myEngine("TestEngine", 1);
     myEngine.Boot();
+    std::cout << "取得したバージョン: " << myEngine.GetVersion() << "\n";
+
+    std::cin.get(); 
 
     return 0;
 }
